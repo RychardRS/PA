@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /*Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de
+atribuição são ilegais?
+*/
+    p = i; // Declaração ilegal, será armazenado um valor inteiro, pois não faz referência ao endereço de "i" para o ponteiro "p"
+    q = &j; // Declaração legal
+    p = &*&i; // Declaração legal
+    i = (*&)j; // Declaração ilegal, os operadores * e & estam dentro de parênteses, portanto, não funcionam
+    i = *&j; // Declaração legal
+    i = *&*&j; // Declaração legal
+    q = *p; // Declaração ilegal, o que está sendo passado pro ponteiro "q" é o dado do ponteiro "p", e não seu endereço
+    i = (*p)++ + *q; // Declaração ilegal, o resultado é um inteiro, pois o operador ++ não está funcionando.
+
+    return 0;
+}
