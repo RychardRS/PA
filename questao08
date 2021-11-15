@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //O que fazem os seguintes programas em C?
+
+    /*ESTE PROGRAMA IRÁ IMPRIMIR TODOS OS ELEMENTOS DE UM VETOR DE TAMANHO 3
+    int main(){
+    int vet[] = {4,9,13};
+    int i;
+    for(i=0;i<3;i++){
+    printf("%d ",*(vet+i));
+    }
+    }*/
+
+    /*ESTE PROGRAMA IRÁ IMPRIMIR TODOS OS ENDEREÇOS DE MEMÓRIA DE CADA VALOR DE UM VETOR DE TAMANHO 3
+    int main(){
+    int vet[] = {4,9,13};
+    int i;
+    for(i=0;i<3;i++){
+    printf("%X ",vet+i);
+    }
+    }
+    */
+    return 0;
+}
