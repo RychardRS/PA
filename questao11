@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /*. Suponha que as seguintes declarações tenham sido realizadas:
+    
+float aloha[10], coisas[10][5], *pf, value = 2.2;
+int i=3;
+Identifique quais dos seguintes comandos é válido ou inválido:
+aloha[2] = value; // válido, o valor 2.2 está sendo armazenado em aloha
+scanf("%f", &aloha); // válido, utiliza o valor de aloha[0]
+aloha = value"; // inválido, pois aloha é um ponteiro
+printf("%f", aloha); // válido
+coisas[4][4] = aloha[3]; // válido
+coisas[5] = aloha; // inválido, o termo "coisas" é uma matriz
+pf = value; // inválido, pois "pf" é um ponteiro e desta forma não está capturando corretamente os dados
+pf = aloha; // válido
+*/
+
+
+    return 0;
+}
