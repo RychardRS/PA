@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int compara(const void *a, const void *b){ // irá comparar e retornar o valor comparado
+  return *(int*)a - *(int *)b; // função qsort
+}
+
+int main(){
+  int tamanho, i; // variáveis declaradas para utilização no programa
+  float *ponteiro; // declarando o ponteiro
+  printf("Informe o tamanho do vetor: \n");
+
+  scanf("%d", &tamanho); // definindo o tamanho do vetor
+
+  ponteiro = malloc(tamanho*sizeof(float)); // reservando espaço para a alocação dinâmica do ponteiro
+
+  printf("Informe os valores do vetor: \n");
+
+  for(i=0;i<tamanho;i++){ // entrando com os valores do vetor
+        scanf("%f", &ponteiro[i]); // guardando no vetor
+    }
+
+  qsort(ponteiro, tamanho, sizeof(float), compara); // utilizando a função qsort para ordenar os elementos
+
+  printf("O vetor ordenado sera: \n");
+
+  for(i=0;i<tamanho;i++){
+    printf ("Posicao[%d] = %f \n", i, ponteiro[i]);// impressão dos elementos ordenados pela função qsort
+  }
+
+
+  free(ponteiro); // libera o espaço ocupado pelo ponteiro
+
+  return 0;
+
+}
