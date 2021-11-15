@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int multiplicacao(int x,int y){
+   return (x*y);
+}
+
+int main()
+{
+    /*O que é um ponteiro para uma função? Pesquise na Internet referências sobre o assunto e
+escreva um pequeno programa exemplificando o uso deste recurso.*/
+
+    //RESPOSTA
+
+    /*Um ponteiro é uma variável capaz de armazenar endereços de memória, que é utilizado principalmente
+    para alocar novos objetos no heap, passar funções para outras funções e para iterar sobre elementos
+    em matrizes ou outras estruturas de dados.
+    */
+
+  int (*ponteiro)(), resultado, x, y;
+  scanf("%d", &x);
+  scanf("%d", &y);
+  ponteiro = multiplicacao;
+  resultado = ponteiro(x,y);
+  printf("%d", resultado);
+    return 0;
+
+}
