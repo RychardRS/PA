@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAX 1000
+
+int compara(int *a, int *b){
+    if(*a < *b){
+        return 0;
+    }else{
+        return 1;
+    }
+}
+
+int comparaQsort(const void *a, const void *b){
+  return (*(int*)a - *(int *)b);
+}
+
+int main()
+{
+    /*Procure na internet mecanismos que possibilitem medir tempos de execução de rotinas
+computacionais. Geralmente, estas medidas são realizadas com o auxílio de funções em C que
+lêem a hora no sistema (sistemas Unix e Windows geralmente usam funções diferentes).
+Utilizando os conhecimentos que você obteve com sua pesquisa, meça os tempos de execução
+das implementações que você criou para os dois problemas de ordenação anteriores e compare
+os resultados obtidos.*/
+
+  clock_t tini, tfim;
+  float tempo, inicio, fim;
+  int i, v[MAX], tamanho;
+  time_t time_ini = time(NULL);
+  time_ini = clock();
+
+  printf("Informe o tamanho do vetor: \n");
+  scanf("%d ", &tamanho);
+
+  printf("Informe os elementos do vetor: \n");
+
+  for(i=0;i<tamanho;i++){
+    scanf("%d ", &v[i]);
+  }
+
+  qsort(v, tamanho, sizeof(int), compara);
+
+  for(i=0;i<tamanho;i++){
+    printf("%d ", *(v+i));
+  }
+
+  time_t time_f = time(NULL);
+  time_f = clock();
+  tempo = (double) difftime(time_f, time_ini);
+  printf("\n%.5f", time_f);
+  printf("\n%.5f", tempo);
+
+  clock_t clock(void);
+    return 0;
+}
