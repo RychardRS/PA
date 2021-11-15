@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+
+int compara(int *a, int *b){
+    if(*a < *b){
+        return 0;
+    }else{
+        return 1;
+    }
+}
+
+int main()
+{
+    /*Utilize a ideia do ponteiro para função pela função qsort() para implementar sua própria função
+de ordenação. Para isso, sua função deverá receber, entre outros argumentos, um ponteiro para
+a função de comparação.*/
+
+    int i, tamanho, v[MAX];
+
+    printf("Informe o tamanho do vetor: \n");
+
+    scanf("%d", &tamanho);
+    for(i=0;i<tamanho;i++){
+        scanf("%d", &v[i]);
+    }
+
+    qsort(v, tamanho, sizeof(int), compara);
+
+    printf("O vetor ordenado sera: \n");
+
+    for(i=0;i<tamanho;i++){
+      printf("%d ", *(v+i));
+    }
+    return 0;
+}
