@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int pulo[5] = {0, 1, 2, 3, 4};
+    printf("endereco do terceiro elemento: %d", &pulo+2);
+    printf("\nvalor do terceiro elemento: %d", pulo+2);
+    printf("\nvalor do terceiro elemento: %d", *pulo+2);
+
+    /* resultado:
+     endereco do terceiro elemento: 6422056
+     valor do terceiro elemento: 6422024
+     Sendo assim, a resposta é "pulo+2"
+     */
+    return 0;
+}
