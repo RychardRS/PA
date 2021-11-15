@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /* Implemente um programa de computador para testar estas suposições e compare as respostas
+oferecidas pelo programa com as respostas que você idealizou.*/
+
+    char v1[5];
+    int v2[5];
+    float v3[5];
+    double v4[5];
+
+    for(int i=0;i<5;i++){
+        printf("%d ", v1+i);
+        printf("%d ", v2+i);
+        printf("%d ", v3+i);
+        printf("%d\n", v4+i);
+    }
+    return 0;
+}
