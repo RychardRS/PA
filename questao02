@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i=5, *p;
+    p = &i; // resposta: 61fe1c ; 7 ; 5 ; 15 ; 9
+
+    return 0;
+}
